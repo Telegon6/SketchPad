@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.chessytrooper.sketchpad.SketchPadView
+        android:id="@+id/sketch_pad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_above="@id/tools_layout" />
+
+    <LinearLayout
+        android:id="@+id/tools_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#EEEEEE"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/color_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_color_palette"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Color Palette" />
+
+        <ImageButton
+            android:id="@+id/brush_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_brush"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Brush" />
+
+        <ImageButton
+            android:id="@+id/pencil_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_pencil"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Pencil" />
+
+        <ImageButton
+            android:id="@+id/eraser_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_eraser"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Eraser" />
+
+        <ImageButton
+            android:id="@+id/undo_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_undo"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Undo" />
+
+        <ImageButton
+            android:id="@+id/save_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_save"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Save" />
+
+        <ImageButton
+            android:id="@+id/clear_btn"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_clear"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Clear" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/current_tool_indicator"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_above="@id/tools_layout"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/tool_indicator_background"
+        android:padding="4dp"
+        android:visibility="gone" />
+
+</RelativeLayout>
